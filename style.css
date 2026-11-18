@@ -131,14 +131,9 @@ p { margin: 0; }
    senão o menu mobile (position: fixed) fica preso dentro da barra. */
 .site-header::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-  transition: background-color .4s var(--ease), border-color .4s var(--ease), backdrop-filter .4s;
-}
-.site-header.is-stuck::before {
   background: rgba(255, 251, 250, .82);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-  border-bottom-color: var(--line);
+  border-bottom: 1px solid var(--line);
 }
 .site-header__inner {
   width: min(100% - 2.5rem, 1240px); margin-inline: auto;
