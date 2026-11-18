@@ -200,7 +200,24 @@ p { margin: 0; }
   overflow: clip;
 }
 .hero__text { align-self: center; position: relative; z-index: 2; }
-.hero__kicker { color: var(--wine); font-weight: 500; font-size: .95rem; margin-bottom: 1.4rem; }
+.hero__kicker { 
+  color: var(--wine); 
+  font-weight: 500; 
+  font-size: .95rem; 
+  margin-bottom: 1.4rem;
+  display: inline-flex; /* Permite alinhar o texto e o traço perfeitamente */
+  align-items: center; 
+  gap: 1rem; /* Espaço entre o texto e o tracinho */
+}
+
+/* Cria o tracinho fininho à direita do texto */
+.hero__kicker::after {
+  content: "";
+  display: block;
+  width: 4rem; /* Comprimento do traço (você pode aumentar ou diminuir) */
+  height: 1px; /* Espessura bem fininha */
+  background-color: var(--rose); /* Cor do traço combinando com a identidade */
+}
 .hero__title {
   margin: 0 0 1.6rem;
   font-family: var(--serif); font-weight: 400;
