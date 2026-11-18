@@ -127,8 +127,7 @@ p { margin: 0; }
   padding-top: env(safe-area-inset-top, 0px);
   background: transparent;
 }
-/* Fundo e blur ficam no pseudo-elemento: o header não pode ter backdrop-filter,
-   senão o menu mobile (position: fixed) fica preso dentro da barra. */
+
 .site-header::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(255, 251, 250, .82);
