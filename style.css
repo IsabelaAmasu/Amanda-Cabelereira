@@ -205,7 +205,14 @@ p { margin: 0; }
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' preserveAspectRatio='xMidYMid slice'%3E%3Cpath d='M860 0C840 140 930 230 1040 280C1160 335 1290 300 1440 420L1440 0Z' fill='%23FBEFF1' fill-opacity='.85'/%3E%3Cpath d='M980 140C1120 60 1320 110 1380 260C1440 410 1340 560 1190 600C1040 640 900 540 890 400C885 290 900 190 980 140Z' fill='%23FFFFFF' fill-opacity='.28'/%3E%3Cpath d='M1100 900C1060 760 1150 640 1270 600C1360 570 1410 520 1440 470L1440 900Z' fill='%23C97B8B' fill-opacity='.17'/%3E%3Cpath d='M0 520C120 500 260 600 300 740C330 830 420 880 480 900L0 900Z' fill='%23FFFBFA' fill-opacity='.5'/%3E%3Cpath d='M0 600C150 560 280 640 330 760C360 830 430 870 520 880' fill='none' stroke='%23C97B8B' stroke-opacity='.4' stroke-width='1.2' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M0 640C130 610 240 690 280 790' fill='none' stroke='%23C97B8B' stroke-opacity='.25' stroke-width='1.2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / cover no-repeat;
 }
-
+/* Fundo orgânico no mobile: uma forma delicada em cada canto (topo direito e base esquerda) */
+@media (max-width: 899px) {
+  .hero::before {
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath d='M300 0L300 230C250 220 200 180 190 120C182 70 135 25 90 0Z' fill='%23FFFFFF' fill-opacity='.45'/%3E%3Cpath d='M300 110C272 106 246 84 240 54C236 34 224 14 210 0L300 0Z' fill='%23C97B8B' fill-opacity='.2'/%3E%3Cpath d='M300 260C230 250 170 205 155 140C145 95 110 50 60 20' fill='none' stroke='%23C97B8B' stroke-opacity='.4' stroke-width='1.2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") top right / min(72%, 300px) auto no-repeat,
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath d='M0 300L0 110C62 120 112 172 132 230C146 268 190 292 235 300Z' fill='%23FFFBFA' fill-opacity='.6'/%3E%3Cpath d='M0 300L0 195C42 200 78 236 92 300Z' fill='%23C97B8B' fill-opacity='.2'/%3E%3Cpath d='M0 245C55 250 100 285 118 300' fill='none' stroke='%23C97B8B' stroke-opacity='.4' stroke-width='1.2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") bottom left / min(76%, 320px) auto no-repeat;
+  }
+}
 .hero__text { align-self: center; position: relative; z-index: 2; }
 .hero__kicker { 
   color: var(--wine); 
