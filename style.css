@@ -232,6 +232,16 @@ p { margin: 0; }
   height: 1px; /* Espessura bem fininha */
   background-color: var(--rose); /* Cor do traço combinando com a identidade */
 }
+/* Mobile: o traço acompanha a quebra de linha e fica ao lado da última palavra ("Campos") */
+@media (max-width: 899px) {
+  .hero__kicker { display: block; }
+  .hero__kicker::after {
+    content: "\2060";            /* junção invisível: impede o traço de cair sozinho na linha de baixo */
+    display: inline; width: auto; height: auto;
+    margin-left: 1rem; padding-left: 4rem;   /* 1rem de respiro + 4rem de traço, mesmas medidas de antes */
+    background: linear-gradient(var(--rose), var(--rose)) center / 100% 1px no-repeat;
+  }
+}
 .hero__title {
   margin: 0 0 1.6rem;
   font-family: var(--serif); font-weight: 400;
